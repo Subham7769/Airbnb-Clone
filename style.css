@@ -1,0 +1,375 @@
+:root {
+  --white: #fff;
+  --black: #000;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  font-family: "ABeeZee", "Inter", "Nunito Sans", "Poppins", "Roboto",
+    sans-serif;
+  line-height: 24px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+header {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: 24px;
+  background-color: var(--black);
+  padding: 0.4rem 2rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav > div {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  color: var(--white);
+  height: auto;
+  gap: 1rem;
+}
+
+.nav-left {
+  justify-content: flex-start;
+}
+
+.nav-center {
+  justify-content: center;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.nav-center > ul {
+  text-align: center;
+  list-style: none;
+}
+
+.nav-center > ul > li {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.nav-center > ul > li > a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1rem;
+}
+
+.profile-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.3rem 1rem;
+  border-radius: 2rem;
+  background-color: var(--white);
+}
+
+.profile {
+  border-radius: 50%;
+  width: auto;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero-section {
+  background-color: var(--black);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 90vh;
+  color: var(--white);
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  /* display: none; */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  border-radius: 1000px;
+  background: var(--white);
+  padding: 0.5rem;
+  color: var(--black);
+}
+
+.search-container div {
+  margin: 0;
+  margin-left: 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 20%;
+}
+
+.search-container > div > h4 {
+  margin: 0;
+}
+
+.search-container > div > input[type="text"] {
+  border: none;
+  outline: none;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5rem;
+  gap: 24px;
+  height: 55%;
+  width: 70%;
+  background-image: url(./Assets/heroCoverImg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.Trip-section {
+  width: 90%;
+  height: 40%;
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  /* color: var(--black); */
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.Trip-section > h2 {
+  align-self: flex-start;
+}
+.next-trip-card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.next-trip-card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 300px;
+  height: auto;
+}
+
+/* .card-img-top {
+} */
+
+.card-body {
+  height: 60%;
+  background-color: #cc2d4a;
+  padding: 1rem;
+}
+
+.Experience-section {
+  display: flex;
+  gap: 1rem;
+  /* border: 1px solid red; */
+  padding: 1rem;
+  width: 90%;
+  height: 70vh;
+  flex-direction: column;
+}
+.Experience-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.Experience-card {
+  overflow: hidden;
+  border-radius: 1rem;
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.Experience-card > img {
+  width: 100%;
+  height: 100%;
+}
+.Experience-card-text {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  width: 40%;
+  position: absolute;
+  top: 3rem;
+  left: 5rem;
+  color: var(--white);
+}
+.Experience-button,
+.gift-button,
+.hosting-button {
+  margin: 0px;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.Gift-section {
+  box-sizing: border-box;
+  padding: 1rem;
+  /* border: 1px solid red; */
+  width: 90%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.gift-text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  flex: 0.2;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.gift-button {
+  background-color: var(--black);
+  color: var(--white);
+}
+.gift-img {
+  padding: 2rem;
+  /* border: 1px solid red; */
+  flex: 0.8;
+}
+.gift-img > img {
+  height: 100%;
+  width: 100%;
+}
+.Hosting-section {
+  display: flex;
+  padding: 3rem;
+  align-items: center;
+  width: 90%;
+  height: 100vh;
+  border-radius: 1rem;
+  background-image: url(./Assets/girl.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hosting-text {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 30%;
+  height: 80%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.hosting-text > p {
+  color: var(--white);
+  font-size: 5rem;
+  line-height: 6rem;
+}
+
+.future-gateway-section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 70vh;
+}
+.future-gateway-menu {
+  border-bottom: 1px solid lightgrey;
+}
+.future-gateway-menu > ul {
+  list-style: none;
+}
+
+.future-gateway-menu > ul > li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.future-gateway-menu > ul > li > a {
+  text-decoration: none;
+  color: var(--black);
+}
+.active {
+  text-decoration: underline;
+}
+.slider-menu {
+width: 100%;
+overflow-x: scroll;
+
+}
+
+.my-list {
+    display: flex;
+  white-space: nowrap;
+}
+.my-list > div {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+}
+table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+}
+
+th,
+td {
+  padding: 1.5rem;
+}
+.subtitle {
+  color: gray;
+}
+table p {
+  margin: 0px;
+  line-height: 1rem;
+}
+
+footer{
+width: 90%;
+height: auto;
+}
+
