@@ -43,7 +43,6 @@ nav {
 nav > div {
   display: flex;
   align-items: center;
-  flex: 1;
   color: var(--white);
   height: auto;
   gap: 1rem;
@@ -51,14 +50,17 @@ nav > div {
 
 .nav-left {
   justify-content: flex-start;
+  flex: 0.3;
 }
 
 .nav-center {
   justify-content: center;
+  flex: 0.4;
 }
 
 .nav-right {
   justify-content: flex-end;
+  flex: 0.3;
 }
 
 .nav-center > ul {
@@ -308,7 +310,7 @@ main {
 .future-gateway-section {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 90vw;
   height: 70vh;
 }
 .future-gateway-menu {
@@ -331,31 +333,23 @@ main {
   text-decoration: underline;
 }
 .slider-menu {
-width: 100%;
-overflow-x: scroll;
-
+  width: 100%;
+  overflow-x: scroll;
 }
-
 .my-list {
-    display: flex;
+  display: flex;
   white-space: nowrap;
 }
-.my-list > div {
-  /* border: 1px solid red; */
+.my-list > .card {
+  border: 1px solid red;
   width: 100%;
-  height: 100%;
+  flex: 0 0 auto;
+  margin-right: 1rem;
 }
 table {
   width: 100%;
-  height: 100%;
   border-collapse: collapse;
 }
-
-table,
-th,
-td {
-}
-
 th,
 td {
   padding: 1.5rem;
@@ -367,9 +361,55 @@ table p {
   margin: 0px;
   line-height: 1rem;
 }
-
 footer{
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  }
+footer>div{
 width: 90%;
 height: auto;
+display: flex;
+justify-content: center;
+height: auto;
+}
+footer>div>div{
+  flex: 1;
 }
 
+.footer-table tr td{
+  height: 0.5rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.1rem;
+  font-size: 0.6rem;
+}
+.footer-table a{
+  text-decoration: none;
+  color: grey;
+}
+footer>hr{
+  background-color: lightgray;
+  height: 1px;
+  width: 100%;
+}
+.Lower-footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.Lower-footer>div{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.6rem;
+}
+.Lower-footer>div>a{
+  text-decoration: none;
+  color: grey;
+}
+/* border: 1px solid red; */
