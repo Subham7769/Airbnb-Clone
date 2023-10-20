@@ -1,0 +1,126 @@
+header {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 100000;
+}
+nav > div {
+  color: black;
+}
+.nav-center {
+  justify-content: center;
+  flex: 0.4;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.search-container {
+  width: 90%;
+  border-radius: 0px;
+  padding: 0.2rem;
+}
+.search-container div {
+  border-right: 1px solid rgb(216, 216, 216);
+  margin: 0;
+  margin-left: 0.5rem;
+  flex: 1;
+}
+.searchButton {
+  width: 40px;
+}
+.Sort_filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.filterButton {
+  background-color: rgb(241, 241, 241);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 99.5vw;
+  height: 80vh;
+}
+.search_results {
+  border: 1px solid red;
+  flex: 0.6;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.search_results > hr {
+  width: 100%;
+  height: 1px;
+  background-color: lightgrey;
+}
+.results_list{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 85%;
+    overflow-y: scroll;
+    gap:1rem;
+}
+.results_list::-webkit-scrollbar{
+    display: none;
+}
+.results {
+    display: flex;
+    height: 200px;
+    width: 90%;
+    gap: 1rem;
+}
+.result-img {
+    flex: 0.35;
+}
+.result-img img{
+    border-radius: 1rem;
+}
+.result-details {
+    flex: 0.65;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.name_favorite{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.favorite{
+    margin: 0.8rem;
+}
+.result-details p{
+    margin: 0;
+ font-size: 0.9rem;
+ color: rgb(105, 105, 105);
+}
+.result-name {
+    margin: 0.3rem 0;
+}
+.rating_price {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.price>span{
+    font-size: 1rem;
+    color: black;
+    font-weight: 600;
+}
+.search_results_map {
+    border: 1px solid black;
+    flex: 0.4;
+  height: 100%;
+  box-sizing: border-box;
+}
+.result_location{
+width: 100%;
+height: 100%;
+}

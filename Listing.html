@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Airbnb-Clone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=Inter&family=Nunito+Sans:opsz@6..12&family=Poppins&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./search-style.css">
+    <link rel="stylesheet" href="./Listing.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-left">
+          <a href="#"><img src="./Assets/logo_red.png" alt="" class="" /></a>
+        </div>
+        <div class="nav-center">
+            <div class="search-container">
+                <div>
+            <input type="text" id="Search" placeholder="Start your search" />
+                 
+                </div>
+                
+                <img
+                  src="./Assets/searchbutton.svg"
+                  alt="search-button"
+                  id="search-button"
+                  class="searchButton"
+                />
+              </div>
+        </div>
+        <div class="nav-right">
+          <div><p>Become a Host</p></div>
+          <div>
+            <i class="fa-solid fa-globe fa-xl" style="color: #000"></i>
+          </div>
+          <div class="profile-menu">
+            <i class="fa-solid fa-bars" style="color: #616161"></i>
+            <span class="profile"
+              ><i class="fa-solid fa-user fa-lg" style="color: #9e9e9e"></i
+            ></span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="result_view">
+        <h2>Bordeaux Getaway</h2>
+        <!-- <div class="result_details">
+          <div>
+            <p><i class="fa-solid fa-star" style="color: #ffd43b;"></i>
+            <span id="result_rating">5.0</span> 7 reviews 
+            <i class="fa-solid fa-medal" style="color: #f00000;"></i>
+            Superhost <span id="result_location">Bordeaux, France</span>
+            </p>
+          </div>
+          <div>
+            <p>
+              <i class="fa-solid fa-share-from-square" style="color: #595959;"></i>
+              Share
+              <i class="fa-regular fa-heart" style="color: #808080;"></i>
+              Save
+            </p>
+          </div>
+        </div>
+        <div class="result_img">
+          <div class="bigPic"></div>
+          <div class="allImg">
+            <div id="pic1"></div>
+            <div id="pic2"></div>
+            <div id="pic3"></div>
+            <div id="pic4"></div>
+            <button class="showAllButton">
+              <i class="fa-solid fa-border-none" style="color: #000000;"></i>
+              Show all photos 
+            </button>
+          </div>
+        </div> -->
+        <section class="result_specifications">
+          <div class="specification">
+            <!-- <div class="property_insights">
+              <div class="property_host">
+                <div><h3>Entire rental unit hosted by Ghazal</h3></div>
+                <div class="property_features">
+                  <p>
+                  <span id="result_guest">2 guest</span> <span id="result-bedroom" >1 bedroom</span>  
+                  <span id="result_bed">1 bed</span><span id="result_bath">1 bath</span>
+                  </p></div>
+              </div>
+              <div>
+                <img src="./Assets/img (2).png" alt="" class="host_img">
+              </div>
+            </div> -->
+            <hr>
+            <!-- <div class="result-data">
+              <div class="property_insights">
+                <div>
+                  <img src="./Assets/homeIcon.png" alt="" class="host_img">
+                </div>
+                <div class="property_host">
+                  <div><h3>Entire rental unit hosted by Ghazal</h3></div>
+                  <div class="property_features">
+                    <p>
+                    <span id="result_guest">2 guest</span> <span id="result-bedroom" >1 bedroom</span>  
+                    <span id="result_bed">1 bed</span><span id="result_bath">1 bath</span>
+                    </p></div>
+                </div>
+              </div>
+              <div class="property_insights">
+                <div>
+                  <img src="./Assets/sparkaleIcon.png" alt="" class="host_img">
+                </div>
+                <div class="property_host">
+                  <div><h3>Entire rental unit hosted by Ghazal</h3></div>
+                  <div class="property_features">
+                    <p>
+                    <span id="result_guest">2 guest</span> <span id="result-bedroom" >1 bedroom</span>  
+                    <span id="result_bed">1 bed</span><span id="result_bath">1 bath</span>
+                    </p></div>
+                </div>
+              </div>
+              <div class="property_insights">
+                <div>
+                  <img src="./Assets/doorIcon.png" alt="" class="host_img">
+                </div>
+                <div class="property_host">
+                  <div><h3>Entire rental unit hosted by Ghazal</h3></div>
+                  <div class="property_features">
+                    <p>
+                    <span id="result_guest">2 guest</span> <span id="result-bedroom" >1 bedroom</span>  
+                    <span id="result_bed">1 bed</span><span id="result_bath">1 bath</span>
+                    </p></div>
+                </div>
+              </div>
+              <div class="property_insights">
+                <div>
+                  <img src="./Assets/calendaricon.png" alt="" class="host_img">
+                </div>
+                <div class="property_host">
+                  <div><h3>Entire rental unit hosted by Ghazal</h3></div>
+                  <div class="property_features">
+                    <p>
+                    <span id="result_guest">2 guest</span> <span id="result-bedroom" >1 bedroom</span>  
+                    <span id="result_bed">1 bed</span><span id="result_bath">1 bath</span>
+                    </p></div>
+                </div>
+              </div>
+            </div> -->
+            <hr>
+            <!-- <div>
+              <p>Come and stay in this superb duplex T2, in the heart of the historic center of Bordeaux. Spacious and bright, in a real Bordeaux building in exposed stone, you will enjoy all the charms of the city thanks to its ideal location. Close to many shops, bars and restaurants, you can access the apartment by tram A and C and bus routes 27 and 44. ...</p>
+            </div> -->
+            <a href="">Show more ></a>
+            <hr>
+            <!-- <div>
+              <h3>Where you’ll sleep</h3>
+              <div>
+                <img src="./Assets/img (3).png" alt="">
+              </div>
+              <div>
+                <p>Bedroom</p>
+                <p>1 queen bed</p>
+              </div>
+            </div> -->
+            <hr>
+            <!-- <div class="property_amanities">
+              <table>
+                <tr>
+                    <td> <img src="./Assets/1Icon.png" class="icon">  Garden view</td>
+                    <td> <img src="./Assets/2Icon.png" class="icon">  Kitchen</td>
+                </tr>
+                <tr>
+                    <td> <img src="./Assets/3Icon.png" class="icon">  Wifi</td>
+                    <td> <img src="./Assets/4Icon.png" class="icon">  Pets allowed</td>
+                </tr>
+                <tr>
+                    <td> <img src="./Assets/5Icon.png" class="icon">  Free washer - in building</td>
+                    <td> <img src="./Assets/6Icon.png" class="icon">  Dryer</td>
+                </tr>
+                <tr>
+                    <td> <img src="./Assets/7Icon.png" class="icon">  Central air conditioning</td>
+                    <td> <img src="./Assets/8Icon.png" class="icon">  Security cameras on property</td>
+                </tr>
+                <tr>
+                    <td> <img src="./Assets/9Icon.png" class="icon">  Refrigerator</td>
+                    <td> <img src="./Assets/10Icon.png" class="icon">  Bicycles</td>
+                </tr>
+            </table>
+            <button class="amenities-button">Show all 37 amenities</button>
+            </div> -->
+            <hr>
+            <div>
+              
+            </div>
+          </div>
+          <div class="calculation">
+            vcvxvc
+          </div>
+        </section>
+      </div>
+    </main>
+</body>
+</html>
