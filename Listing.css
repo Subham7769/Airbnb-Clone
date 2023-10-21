@@ -1,103 +1,101 @@
 .search-container div {
-    border: none;
-  }
-  main {
-    flex-direction: column;
-    width: 95vw;
-    border: 1px solid red;
-    height: auto;
-    padding: 2rem 5rem;
-    box-sizing: border-box;
-  }
-  .result_view {
-    width: 100%;
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .result_view h2{
-    margin: 0;
-  }
-  .result_details {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-  .result_img {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    height:30rem;
-    overflow: hidden;
-    border-radius: 1rem;
-    gap: 1rem;
-  }
-  .result_img div{
-    flex: 1;
-  }
-  .bigPic{
-    background-image: url(./Assets/roombig.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-
-  }
-  .allImg{
-    position: relative;
-    display: grid;
-    flex-wrap: wrap;
-    grid-template-columns: 50% 50%;
-    gap: 1rem;
-  }
-  .showAllButton {
-    background-color: rgb(241, 241, 241);
-    padding: 0.5rem 1rem;
-    border-radius: 0.3rem;
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-  }
-  .allImg div{
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-  }
-#pic1{
+  border: none;
+}
+main {
+  flex-direction: column;
+  width: 95vw;
+  /* border: 1px solid red; */
+  height: auto;
+  padding: 2rem 5rem;
+  box-sizing: border-box;
+}
+.result_view {
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.result_view h2 {
+  margin: 0;
+}
+.result_details {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.result_img {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 30rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  gap: 1rem;
+}
+.result_img div {
+  flex: 1;
+}
+.bigPic {
+  background-image: url(./Assets/roombig.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.allImg {
+  position: relative;
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+}
+.showAllButton {
+  background-color: rgb(241, 241, 241);
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.allImg div {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+#pic1 {
   background-image: url(./Assets/room1.png);
-
 }
-#pic2{
+#pic2 {
   background-image: url(./Assets/room2.png);
-} 
-#pic3{
-  background-image: url(./Assets/room3.png);
-
 }
-#pic4{
+#pic3 {
+  background-image: url(./Assets/room3.png);
+}
+#pic4 {
   background-image: url(./Assets/room4.png);
-} 
+}
 .result_specifications {
   margin-top: 2rem;
   display: flex;
   gap: 2rem;
   width: 100%;
 }
+
 .specification {
-  flex:0.7;
-display: flex;
-flex-direction: column;
-gap: 2rem;
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
-.specification hr{
+.specification hr {
   width: 100%;
 }
-.specification a{
+.specification a {
   color: black;
 }
 .property_insights {
@@ -108,11 +106,13 @@ gap: 2rem;
   align-items: center;
 }
 .property_host {
-  flex: .99;
+  flex: 0.99;
 }
-.property_host h3, p{
+.property_host h3,
+p {
   margin: 0;
 }
+
 .property_features {
   color: gray;
 }
@@ -120,45 +120,196 @@ gap: 2rem;
   border-radius: 50%;
   width: 50px;
 }
-
-.result-data{
+.result-data {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  
 }
-.property_amanities  table {
+
+.property_amanities table {
   width: 100%;
   border-collapse: collapse;
   color: black;
   font-size: 1.5rem;
 }
-
-th, td {
+th,
+td {
   padding: 1rem;
   border: none;
   vertical-align: middle; /* Add this line to vertically center the text */
 }
-.property_amanities table>tr>td{
+.property_amanities table > tr > td {
   vertical-align: middle;
 }
-.icon{
+.icon {
   width: 24px; /* Adjust the width of the icons as needed */
   height: 24px;
-margin-right: 1rem;
+  margin-right: 1rem;
 }
-
-.amenities-button{
+.amenities-button {
   margin: 0px;
   border: 1px solid #000;
   border-radius: 0.5rem;
   padding: 1rem 1.5rem;
 }
-border: 1px solid red;
-border: 1px solid black;
-border: 1px solid black;
-border: 1px solid blue;
+
+.calender_view {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  align-self: stretch;
+}
+/* .calender_head {
+} */
+.calender {
+  display: flex;
+  flex-direction: column;
+}
+.calender > div img {
+  max-width: 100%; /* Maximum image width is 100% of the container width */
+  max-height: 100%; /* Maximum image height is 100% of the container height */
+  height: auto;
+}
+.keyboard_clear {
+  display: flex;
+  justify-content: space-between;
+}
+.keyboard_clear a {
+  color: black;
+}
+
 .calculation {
-  border: 1px solid black;
   flex: 0.3;
+  display: flex;
+  text-align: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.booking_box {
+  /* border: 1px solid red; */
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px lightgray;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.booking_rate_review p {
+  display: flex;
+  justify-content: space-between;
+}
+.booking_details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.bookingDuration {
+  border-bottom: 1px solid gray;
+  display: flex;
+  flex: 1;
+  text-align: left;
+}
+.bookingCheckIn {
+  padding: 1rem;
+  flex: 1;
+}
+.bookingCheckIn input[type="text"],
+.bookingCheckout input[type="text"],
+.bookingGuest select {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  color: gray;
+}
+.bookingCheckout {
+  padding: 1rem;
+  border-left: 1px solid gray;
+  flex: 1;
+}
+.bookingGuest {
+  flex: 1;
+  text-align: left;
+  padding: 1rem;
+}
+.ReserveButton {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #de3151;
+  color: white;
+}
+/* .booking_payment_details {
+} */
+.booking_table {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.booking_table td {
+  text-align: left;
+  padding: 0;
+  padding-top: 1rem;
+}
+.booking_table td:nth-child(even) {
+  text-align: right;
+}
+.booking_table tr:last-child td {
+  padding-bottom: 1rem;
+}
+.booking_table tfoot {
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-top: 1px solid gray;
+}
+.calculation p {
+  margin-top: 2rem;
+}
+.calculation p a {
+  color: gray;
+}
+
+.rating_services {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col1, .col2 {
+  flex: 1;
+}
+.rating_services_table {
+  width: 100%;
+  table-layout: fixed; /* Set table layout to fixed */
+}
+.rating_services_table td {
+  text-align: left; /* Center the text within the cells */
+}
+.rating_services_table td:nth-child(even) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+#progress {
+  appearance: none;
+  border-radius: 1rem;
+  width: 100%;
+  overflow: hidden;
+  height: 8px;
+}
+#progress::-webkit-progress-value {
+  border-radius: 1rem;
+  background-color: black;
+}
+.users_review{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
 }

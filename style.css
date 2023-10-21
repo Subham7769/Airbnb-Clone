@@ -342,7 +342,7 @@ main {
   white-space: nowrap;
 }
 .my-list > .card {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   flex: 0 0 auto;
   margin-right: 1rem;

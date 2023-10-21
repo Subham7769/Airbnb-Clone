@@ -30,21 +30,21 @@
         <div class="nav-center">
             <div class="search-container">
                 <div>
-                  <h4>Bordeaux</h4>
+                  <input type="text" placeholder="Bordeaux" id="sortByLocation">
                 </div>
                 <div>
-                  <h4>Feb 19-26</h4>
+                  <input type="text" placeholder="Feb 19-26" id="sortByDate">
                 </div>
                 <div>
-                  <h4>2 guests</h4>
+                  <input type="text" placeholder="2 guests" id="sortByGuest">
                 </div>
-                
+                <a id="SearchButton">
                 <img
                   src="./Assets/searchbutton.svg"
                   alt="search-button"
                   id="search-button"
                   class="searchButton"
-                />
+                /></a>
               </div>
         </div>
         <div class="nav-right">
@@ -61,109 +61,158 @@
         </div>
       </nav>
       <div class="Sort_filters">
-        <select class="filterButton">
+        <select class="filterButton" id="sortByPrice">
           <option value="Price" selected>Price</option>
         </select>
-        <select class="filterButton">
+        <select class="filterButton" id="sortByPlaceType">
           <option value="Type of place" selected>Type of place</option>
         </select>
-        <button class="filterButton">Type of place</button>
-        <button class="filterButton">Free Cancellation</button>
-        <button class="filterButton">Wifi</button>
-        <button class="filterButton">Kitchen</button>
-        <button class="filterButton">Air conditioning</button>
-        <button class="filterButton">Washer</button>
-        <button class="filterButton">Iron</button>
-        <button class="filterButton">Dedicated workspace</button>
-        <button class="filterButton">Free parking</button>
-        <button class="filterButton">Dryer</button>
-        <button class="filterButton"><i class="fa-solid fa-sliders" style="color: #050505;"></i> Filters</button>
+        <button class="filterButton" id="sortByFreeCancellation">Free Cancellation</button>
+        <button class="filterButton" id="sortByWifi">Wifi</button>
+        <button class="filterButton" id="sortByKitchen">Kitchen</button>
+        <button class="filterButton" id="sortByAC">Air conditioning</button>
+        <button class="filterButton" id="sortByWasher">Washer</button>
+        <button class="filterButton" id="sortByIron">Iron</button>
+        <button class="filterButton" id="sortByWorkspace">Dedicated workspace</button>
+        <button class="filterButton" id="sortByParking">Free parking</button>
+        <button class="filterButton" id="sortByDryer">Dryer</button>
+        <button class="filterButton" id="filterButton"><i class="fa-solid fa-sliders" style="color: #050505;"></i> Filters</button>
     </div>
     </header>
     <main>
         <section class="search_results">
           <h4>200+ stays in Bordeaux</h4>
           <hr>
-          <div class="results_list">
+        <!-- search result -->
+          <div class="results_list" id="results_list">
+            <!-- all search properties available -->
+            <div class="results">
+              <div class="result-img">
+                <img src="./Assets/img (4).png" alt="">
+              </div>
+              <div class="result-details">
+                <div class="name_favorite">
+                  <div>
+                    <p>Entire home in Bordeaux</p>
+                    <h4 class="result-name" id="result-name">Bordeaux Getaway</h4>
+                  </div>
+                  <div class="favorite">
+                    <i class="fa-solid fa-heart fa-xl" style="color: #e41111;"></i>
+                  </div>
+                </div>
+                <div>
+                  <p>4-6 guests · Entire Home · 5 beds · 3 bath</p>
+                  <p>Wifi · Kitchen · Free Parking</p>
+                </div>
+                <div class="rating_price">
+                  <p>5.0 <i class="fa-solid fa-star" style="color: #ffd43b;"></i> (318 reviews)</p>
+                  <p class="price"><span>$350</span> / night</p>
+                </div>
+              </div>
+            </div>
+            <div class="results">
+              <div class="result-img">
+                <img src="./Assets/img (4).png" alt="">
+              </div>
+              <div class="result-details">
+                <div class="name_favorite">
+                  <div>
+                    <p>Entire home in Bordeaux</p>
+                    <h4 class="result-name" id="result-name">Bordeaux Getaway</h4>
+                  </div>
+                  <div class="favorite">
+                    <i class="fa-solid fa-heart fa-xl" style="color: #e41111;"></i>
+                  </div>
+                </div>
+                <div>
+                  <p>4-6 guests · Entire Home · 5 beds · 3 bath</p>
+                  <p>Wifi · Kitchen · Free Parking</p>
+                </div>
+                <div class="rating_price">
+                  <p>5.0 <i class="fa-solid fa-star" style="color: #ffd43b;"></i> (318 reviews)</p>
+                  <p class="price"><span>$350</span> / night</p>
+                </div>
+              </div>
+            </div>
+            <div class="results">
+              <div class="result-img">
+                <img src="./Assets/img (4).png" alt="">
+              </div>
+              <div class="result-details">
+                <div class="name_favorite">
+                  <div>
+                    <p>Entire home in Bordeaux</p>
+                    <h4 class="result-name" id="result-name">Bordeaux Getaway</h4>
+                  </div>
+                  <div class="favorite">
+                    <i class="fa-solid fa-heart fa-xl" style="color: #e41111;"></i>
+                  </div>
+                </div>
+                <div>
+                  <p>4-6 guests · Entire Home · 5 beds · 3 bath</p>
+                  <p>Wifi · Kitchen · Free Parking</p>
+                </div>
+                <div class="rating_price">
+                  <p>5.0 <i class="fa-solid fa-star" style="color: #ffd43b;"></i> (318 reviews)</p>
+                  <p class="price"><span>$350</span> / night</p>
+                </div>
+              </div>
+            </div>
+            <div class="results">
+              <div class="result-img">
+                <img src="./Assets/img (4).png" alt="">
+              </div>
+              <div class="result-details">
+                <div class="name_favorite">
+                  <div>
+                    <p>Entire home in Bordeaux</p>
+                    <h4 class="result-name" id="result-name">Bordeaux Getaway</h4>
+                  </div>
+                  <div class="favorite">
+                    <i class="fa-solid fa-heart fa-xl" style="color: #e41111;"></i>
+                  </div>
+                </div>
+                <div>
+                  <p>4-6 guests · Entire Home · 5 beds · 3 bath</p>
+                  <p>Wifi · Kitchen · Free Parking</p>
+                </div>
+                <div class="rating_price">
+                  <p>5.0 <i class="fa-solid fa-star" style="color: #ffd43b;"></i> (318 reviews)</p>
+                  <p class="price"><span>$350</span> / night</p>
+                </div>
+              </div>
+            </div>
+            <div class="results">
+              <div class="result-img">
+                <img src="./Assets/img (4).png" alt="">
+              </div>
+              <div class="result-details">
+                <div class="name_favorite">
+                  <div>
+                    <p>Entire home in Bordeaux</p>
+                    <h4 class="result-name" id="result-name">Bordeaux Getaway</h4>
+                  </div>
+                  <div class="favorite">
+                    <i class="fa-solid fa-heart fa-xl" style="color: #e41111;"></i>
+                  </div>
+                </div>
+                <div>
+                  <p>4-6 guests · Entire Home · 5 beds · 3 bath</p>
+                  <p>Wifi · Kitchen · Free Parking</p>
+                </div>
+                <div class="rating_price">
+                  <p>5.0 <i class="fa-solid fa-star" style="color: #ffd43b;"></i> (318 reviews)</p>
+                  <p class="price"><span>$350</span> / night</p>
+                </div>
+              </div>
+            </div>
 
-            <div class="results">
-              <div class="result-img">
-                <img src="./Assets/img (4).png" alt="">
-              </div>
-              <div class="result-details">
-                <div class="name_favorite">
-                  <div>
-                    <p>Entire home in Bordeaux</p>
-                    <h4 class="result-name" id="result-name">Bordeaux Getaway</h4>
-                  </div>
-                  <div class="favorite">
-                    <i class="fa-solid fa-heart fa-xl" style="color: #e41111;"></i>
-                  </div>
-                </div>
-                <div>
-                  <p>4-6 guests · Entire Home · 5 beds · 3 bath</p>
-                  <p>Wifi · Kitchen · Free Parking</p>
-                </div>
-                <div class="rating_price">
-                  <p>5.0 <i class="fa-solid fa-star" style="color: #ffd43b;"></i> (318 reviews)</p>
-                  <p class="price"><span>$350</span> / night</p>
-                </div>
-              </div>
-            </div>
-            <div class="results">
-              <div class="result-img">
-                <img src="./Assets/img (4).png" alt="">
-              </div>
-              <div class="result-details">
-                <div class="name_favorite">
-                  <div>
-                    <p>Entire home in Bordeaux</p>
-                    <h4 class="result-name" id="result-name">Bordeaux Getaway</h4>
-                  </div>
-                  <div class="favorite">
-                    <i class="fa-solid fa-heart fa-xl" style="color: #e41111;"></i>
-                  </div>
-                </div>
-                <div>
-                  <p>4-6 guests · Entire Home · 5 beds · 3 bath</p>
-                  <p>Wifi · Kitchen · Free Parking</p>
-                </div>
-                <div class="rating_price">
-                  <p>5.0 <i class="fa-solid fa-star" style="color: #ffd43b;"></i> (318 reviews)</p>
-                  <p class="price"><span>$350</span> / night</p>
-                </div>
-              </div>
-            </div>
-            <div class="results">
-              <div class="result-img">
-                <img src="./Assets/img (4).png" alt="">
-              </div>
-              <div class="result-details">
-                <div class="name_favorite">
-                  <div>
-                    <p>Entire home in Bordeaux</p>
-                    <h4 class="result-name" id="result-name">Bordeaux Getaway</h4>
-                  </div>
-                  <div class="favorite">
-                    <i class="fa-solid fa-heart fa-xl" style="color: #e41111;"></i>
-                  </div>
-                </div>
-                <div>
-                  <p>4-6 guests · Entire Home · 5 beds · 3 bath</p>
-                  <p>Wifi · Kitchen · Free Parking</p>
-                </div>
-                <div class="rating_price">
-                  <p>5.0 <i class="fa-solid fa-star" style="color: #ffd43b;"></i> (318 reviews)</p>
-                  <p class="price"><span>$350</span> / night</p>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
         <section class="search_results_map">
           <img src="./Assets/map.png" alt="result_location" id="result_location" class="result_location">
         </section>
-
     </main>
+    <script src="./Script/Search.js"></script>
 </body>
 </html>

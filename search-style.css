@@ -48,7 +48,7 @@ main {
   height: 80vh;
 }
 .search_results {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   flex: 0.6;
   height: 100%;
   padding: 1rem;
@@ -78,9 +78,13 @@ main {
 }
 .result-img {
     flex: 0.35;
+    overflow: hidden;
 }
 .result-img img{
     border-radius: 1rem;
+    max-width: 100%; /* Maximum image width is 100% of the container width */
+    max-height: 100%; /* Maximum image height is 100% of the container height */
+    height: auto;
 }
 .result-details {
     flex: 0.65;
@@ -115,7 +119,7 @@ main {
     font-weight: 600;
 }
 .search_results_map {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     flex: 0.4;
   height: 100%;
   box-sizing: border-box;
