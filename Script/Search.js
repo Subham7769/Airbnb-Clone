@@ -1,22 +1,73 @@
-const url = "./data.json";
+/*********************************************Accessing Data from local JSON*********************************************************** */
+const url = "../Json/data.json";
+let SiteData;
 let SortedArrObj;
 
 const dataLoader = async () => {
-  let SiteData = await fetch(url)
-    .then((data) => {
-      return data.json();
-    })
-    .then((result) => {
-      return result.data;
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-  console.log(SiteData);
-  SortedArrObj = SiteData;
+  try {
+    const response = await fetch(url);
+    const result = await response.json();
+    const dataArray = result; // Assuming "results" is an array of objects
+    return dataArray;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+(async () => {
+  SiteData = await dataLoader();
+  console.log(SiteData); // Now SiteData contains the array of objects
+
+  // You can perform further processing or actions with SiteData here.
+  SortedArrObj=SiteData;
+/******************************************************************************************************************************* */
+
+
+
+
+
+/**********************************************Accessing Data from API*********************************************************** */
+
+// const url = 'https://airbnb13.p.rapidapi.com/search-location?location=Paris&checkin=2023-11-16&checkout=2023-11-17&adults=1&children=0&infants=0&pets=0&page=1&currency=USD';
+// let SiteData; // Define the global variable
+// let SortedArrObj;
+
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '4f025f3c90mshcd7cc3f6e18df3cp1342dejsn4acacb873d5a',
+// 		'X-RapidAPI-Host': 'airbnb13.p.rapidapi.com'
+// 	}
+// };
+
+// const dataLoader = async () => {
+//   try {
+//     const response = await fetch(url, options);
+//     const result = await response.json();
+//     const dataArray = result.results; // Assuming "results" is an array of objects
+//     // console.log(dataArray);
+//     return dataArray;
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
+
+// (async () => {
+//   SiteData = await dataLoader(); // Wait for dataLoader to complete and assign the result to SiteData
+//   console.log(SiteData); // Now SiteData contains the array of objects
+
+  // You can perform further processing or actions with SiteData here.
+// SortedArrObj=SiteData;
+
+/******************************************************************************************************************************** */
+ 
+
   /***********Accessing Element Of Search.HTML page**********/
 
   //   All Filters
+  // let sortByLocation = document.getElementById("sortByLocation").value;
+  // let sortByDate = document.getElementById("sortByDate").value;
+  // let sortByGuest = document.getElementById("sortByGuest").value;
   let SearchButton = document.getElementById("SearchButton");
   let sortByPrice = document.getElementById("sortByPrice");
   let sortByPlaceType = document.getElementById("sortByPlaceType");
@@ -32,14 +83,28 @@ const dataLoader = async () => {
   let sortByParking = document.getElementById("sortByParking");
   let sortByDryer = document.getElementById("sortByDryer");
   let filterButton = document.getElementById("filterButton");
+  let totalAvailable = document.getElementById("totalAvailable");
 
   //  Search List & Element
   let results_list = document.getElementById("results_list");
   let results = document.querySelectorAll(".results");
 
-  /*****************All functions****************/
+  /*******************************************All functions*******************************************************/
+  
+  /*********Initialize the rendering**************/
+
+  //Assigning all types of property to the filter elements (type)
+  
+  function AssignTypesFilter(){
+    const uniqueTypes = [...new Set(SiteData.map(obj => obj.type))];
+    console.log(uniqueTypes);
+  }
+  //  All Available Property
+  createResults(SiteData);
+  
   //   Rendering Search result function
   function createResults(ArrObj) {
+    totalAvailable.innerHTML = `${ArrObj.length}+ stays in ${ArrObj[0].city}`;
     results_list.innerHTML = ``;
 
     for (var i = 0; i < ArrObj.length; i++) {
@@ -96,6 +161,12 @@ const dataLoader = async () => {
     });
     return ArrObj;
   }
+  
+
+
+
+
+
 
   /**All events Handlers for search & sorting*/
   SearchButton.addEventListener("click", () => {
@@ -172,6 +243,4 @@ const dataLoader = async () => {
     createResults(SortedArrObj);
   });
   
-  
-};
-dataLoader();
+})();

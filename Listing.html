@@ -18,9 +18,9 @@
       href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=Inter&family=Nunito+Sans:opsz@6..12&family=Poppins&family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./search-style.css" />
-    <link rel="stylesheet" href="./Listing.css" />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <link rel="stylesheet" href="./Css/search-style.css" />
+    <link rel="stylesheet" href="./Css/Listing.css" />
   </head>
   <body>
     <header>
@@ -57,9 +57,9 @@
       </nav>
     </header>
     <main>
-      <div class="result_view">
+      <section class="result_view">
         <h2>Bordeaux Getaway</h2>
-        <div class="result_details">
+        <section class="result_details">
           <div>
             <p>
               <i class="fa-solid fa-star" style="color: #ffd43b"></i>
@@ -79,20 +79,22 @@
               Save
             </p>
           </div>
-        </div>
-        <div class="result_img">
-          <div class="bigPic"></div>
+        </section>
+
+        <section class="result_img">
+          <div class="bigPic" style="background-image: url('../Assets/roombig.png');"></div>
           <div class="allImg">
-            <div id="pic1"></div>
-            <div id="pic2"></div>
-            <div id="pic3"></div>
-            <div id="pic4"></div>
+            <div style="background-image: url('../Assets/room1.png');"></div>
+            <div style="background-image: url('../Assets/room2.png');"></div>
+            <div style="background-image: url('../Assets/room3.png');"></div>
+            <div style="background-image: url('../Assets/room4.png');"></div>
             <button class="showAllButton">
               <i class="fa-solid fa-border-none" style="color: #000000"></i>
               Show all photos
             </button>
           </div>
-        </div>
+        </section>
+
         <section class="result_specifications">
           <div class="specification">
             <div class="property_insights">
@@ -187,7 +189,7 @@
               </div>
             </div>
             <hr />
-            <div>
+            <div class="about_property">
               <p>
                 Come and stay in this superb duplex T2, in the heart of the
                 historic center of Bordeaux. Spacious and bright, in a real
@@ -196,10 +198,10 @@
                 shops, bars and restaurants, you can access the apartment by
                 tram A and C and bus routes 27 and 44. ...
               </p>
+              <a href="" class="show_more">Show more ></a>
             </div>
-            <a href="">Show more ></a>
             <hr />
-            <div>
+            <div class="property_pic_gallery">
               <h3>Where you’ll sleep</h3>
               <div>
                 <img src="./Assets/img (3).png" alt="" />
@@ -273,29 +275,44 @@
             <div class="booking_box">
               <div class="booking_rate_review">
                 <p>
-                  <span><b>$75</b> / night</span> <span>5.0 <i class="fa-solid fa-star" style="color: #ffd43b;"></i> - 7 reviews</span>
+                  <span><b>$75</b> / night</span>
+                  <span
+                    >5.0
+                    <i class="fa-solid fa-star" style="color: #ffd43b"></i> - 7
+                    reviews</span
+                  >
                 </p>
               </div>
               <div class="booking_details">
                 <div class="bookingDuration">
                   <div class="bookingCheckIn">
                     <b>CHECK-IN</b>
-                    <input type="text" name="bookingCheckIn" id="bookingCheckIn" placeholder="2/19/2022">
+                    <input
+                      type="text"
+                      name="bookingCheckIn"
+                      id="bookingCheckIn"
+                      placeholder="2/19/2022"
+                    />
                   </div>
                   <div class="bookingCheckout">
                     <b>CHECK-OUT</b>
-                    <input type="text" name="bookingCheckOut" id="bookingCheckOut" placeholder="2/26/2022">
+                    <input
+                      type="text"
+                      name="bookingCheckOut"
+                      id="bookingCheckOut"
+                      placeholder="2/26/2022"
+                    />
                   </div>
                 </div>
                 <div class="bookingGuest">
-                  <b>GUESTS</b><br>
-                    <select id="guestNumber">
-                      <option value="2" selected>2 guests</option>
-                      <option value="3" selected>3 guests</option>
-                      <option value="4" selected>4 guests</option>
-                      <option value="5" selected>5 guests</option>
-                      <option value="6" selected>6 guests</option>
-                    </select>
+                  <b>GUESTS</b><br />
+                  <select id="guestNumber">
+                    <option value="2" selected>2 guests</option>
+                    <option value="3" selected>3 guests</option>
+                    <option value="4" selected>4 guests</option>
+                    <option value="5" selected>5 guests</option>
+                    <option value="6" selected>6 guests</option>
+                  </select>
                 </div>
               </div>
               <button class="ReserveButton" id="ReserveButton">Reserve</button>
@@ -331,28 +348,42 @@
                 </table>
               </div>
             </div>
-            <p><i class="fa-regular fa-flag" style="color: #878787;"></i><a href=""> Report this listing</a></p>
+            <p>
+              <i class="fa-regular fa-flag" style="color: #878787"></i
+              ><a href=""> Report this listing</a>
+            </p>
           </div>
         </section>
+
+        <hr />
         <section class="reviews_section">
           <h3>
             <i class="fa-solid fa-star" style="color: #ffd43b"></i>
-             5.0 - 7 reviews
+            5.0 - 7 reviews
           </h3>
           <div class="rating_services">
             <div class="col1">
               <table class="rating_services_table">
                 <tr>
                   <td>Cleanliness</td>
-                  <td><progress id="progress" max="5" value="5"></progress> <span>5.0</span></td>
+                  <td>
+                    <progress id="progress" max="5" value="5"></progress>
+                    <span>5.0</span>
+                  </td>
                 </tr>
                 <tr>
                   <td>Communication</td>
-                  <td><progress id="progress" max="5" value="5"></progress> <span>5.0</span></td>
+                  <td>
+                    <progress id="progress" max="5" value="5"></progress>
+                    <span>5.0</span>
+                  </td>
                 </tr>
                 <tr>
                   <td>Check-in</td>
-                  <td><progress id="progress" max="5" value="5"></progress> <span>5.0</span></td>
+                  <td>
+                    <progress id="progress" max="5" value="5"></progress>
+                    <span>5.0</span>
+                  </td>
                 </tr>
               </table>
             </div>
@@ -360,25 +391,412 @@
               <table class="rating_services_table">
                 <tr>
                   <td>Accuracy</td>
-                  <td><progress id="progress" max="5" value="5"></progress> <span>5.0</span></td>
+                  <td>
+                    <progress id="progress" max="5" value="5"></progress>
+                    <span>5.0</span>
+                  </td>
                 </tr>
                 <tr>
                   <td>Location</td>
-                  <td><progress id="progress" max="5" value="5"></progress> <span>5.0</span></td>
+                  <td>
+                    <progress id="progress" max="5" value="5"></progress>
+                    <span>5.0</span>
+                  </td>
                 </tr>
                 <tr>
                   <td>Value</td>
-                  <td><progress id="progress" max="5" value="5"></progress> <span>5.0</span></td>
+                  <td>
+                    <progress id="progress" max="5" value="5"></progress>
+                    <span>5.0</span>
+                  </td>
                 </tr>
               </table>
-              
             </div>
           </div>
           <div class="users_review">
-            <div class=""></div>
+            <div class="review_card">
+              <div class="review_header">
+                <div class="user_img_container">
+                  <img src="./Assets/room4.png" alt="" class="user_img" />
+                </div>
+                <div class="user_details">
+                  <h4>Shayna</h4>
+                  <p class="subtitle">December 2021</p>
+                </div>
+              </div>
+              <p>
+                Wonderful neighborhood, easy access to restaurants and the
+                subway, cozy studio apartment with a super comfortable bed.
+                Great host, super helpful and responsive. Cool murphy bed...
+              </p>
+              <a href="" class="show_more">Show more ></a>
+            </div>
+            <div class="review_card">
+              <div class="review_header">
+                <div class="user_img_container">
+                  <img src="./Assets/room4.png" alt="" class="user_img" />
+                </div>
+                <div class="user_details">
+                  <h4>Shayna</h4>
+                  <p class="subtitle">December 2021</p>
+                </div>
+              </div>
+              <p>
+                Wonderful neighborhood, easy access to restaurants and the
+                subway, cozy studio apartment with a super comfortable bed.
+                Great host, super helpful and responsive. Cool murphy bed...
+              </p>
+              <a href="" class="show_more">Show more ></a>
+            </div>
+            <div class="review_card">
+              <div class="review_header">
+                <div class="user_img_container">
+                  <img src="./Assets/room4.png" alt="" class="user_img" />
+                </div>
+                <div class="user_details">
+                  <h4>Shayna</h4>
+                  <p class="subtitle">December 2021</p>
+                </div>
+              </div>
+              <p>
+                Wonderful neighborhood, easy access to restaurants and the
+                subway, cozy studio apartment with a super comfortable bed.
+                Great host, super helpful and responsive. Cool murphy bed...
+              </p>
+              <a href="">Show more ></a>
+            </div>
+            <button class="showAllReviewButton">Show all 12 reviews</button>
           </div>
         </section>
-      </div>
+
+        <hr />
+        <section class="result_map">
+          <h3>Where you’ll be</h3>
+          <div class="map_area">
+            <img src="./Assets/map.png" alt="" />
+          </div>
+          <h4 class="location_name">Bordeaux, Nouvelle-Aquitaine, France</h4>
+          <p class="location_about">
+            Very dynamic and appreciated district by the people of Bordeaux
+            thanks to rue St James and place Fernand Lafargue. Home to many
+            historical monuments such as the Grosse Cloche, the Porte de
+            Bourgogne and the Porte Cailhau, and cultural sites such as the
+            Aquitaine Museum.
+          </p>
+          <a href="" class="show_more">Show more ></a>
+        </section>
+
+        <hr />
+        <section class="host_details_section">
+          
+        </section>
+
+        <hr />
+        <section class="things_to_know">
+            <div class="section_heading"><h3>Things to know</h3></div>
+            <div class="Upper_footer">
+              <div>
+                <table class="footer-table">
+                  <tr>
+                    <td><h4>House rules</h4></td>
+                  </tr>
+                  <tr>
+                    <td>Check-in: After 4:00 PM</td>
+                  </tr>
+                  <tr>
+                    <td>Checkout:  10:00 AM</td>
+                  </tr>
+                  <tr>
+                    <td>Self check-in with lockbox</td>
+                  </tr>
+                  <tr>
+                    <td>Not suitable for infants (under 2 years)</td>
+                  </tr>
+                  <tr>
+                    <td>No smoking</td>
+                  </tr>
+                  <tr>
+                    <td>No pets</td>
+                  </tr>
+                  <tr>
+                    <td>No parties or events</td>
+                  </tr>
+                </table>
+              </div>
+      
+              <div>
+                <table class="footer-table">
+                  <tr>
+                    <td><h4>Health & safety</h4></td>
+                  </tr>
+                  <tr>
+                    <td>Committed to Airbnb's enhanced cleaning process.<a href="" class="show_more">Show more ></a></td>
+                  </tr>
+                  <tr>
+                    <td>Airbnb's social-distancing and other COVID-19-related guidelines apply</td>
+                  </tr>
+                  <tr>
+                    <td>Carbon monoxide alarm</td>
+                  </tr>
+                  <tr>
+                    <td>Smoke alarm</td>
+                  </tr>
+                  <tr>
+                    <td>Security Deposit - if you damage the home, you may be charged up to $566</td>
+                  </tr>
+                </table>
+              </div>
+      
+              <div>
+                <table class="footer-table">
+                  <tr>
+                    <td><h4>Cancellation policy</h4></td>
+                  </tr>
+                  <tr>
+                    <td>Free cancellation before Feb 14</td>
+                  </tr>
+                  <tr>
+                    <td><a href="" class="show_more">Show more ></a></td>
+                  </tr>
+                </table>
+              </div>
+      
+            </div>
+            <a href="" class="show_more">Show more ></a>
+        </section>
+
+        <hr />
+      </section>
+
     </main>
+    <footer>
+      <section class="Explore">
+      <div class="section_heading"><h3>Explore other options in France</h3></div>
+      <div class="Upper_footer">
+        <div>
+          <table class="footer-table">
+            <tr>
+              <td><a href="">Paris</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Lille</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Toulouse</a></td>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <table class="footer-table">
+            <tr>
+              <td><a href="">Nice</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Aix-en-Provence</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Montpellier</a></td>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <table class="footer-table">
+            <tr>
+              <td><a href="">Lyon</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Rouen</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Dijon</a></td>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <table class="footer-table">
+            <tr>
+              <td><a href="">Marseille</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Amiens</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Grenoble</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="unique_stay">
+        <div class="section_heading"><h4>Unique stays on Airbnb</h4></div>
+        <div class="Upper_footer">
+        <div>
+          <table class="footer-table">
+            <tr>
+              <td><a href="">Beach House Rentals</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Cabin Rentals</a></td>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <table class="footer-table">
+            <tr>
+              <td><a href="">Camper Rentals</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Tiny House Rentals</a></td>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <table class="footer-table">
+            <tr>
+              <td><a href="">Glamping Rentals</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Lakehouse Rentals</a></td>
+            </tr>
+          </table>
+        </div>
+
+        <div>
+          <table class="footer-table">
+            <tr>
+              <td><a href="">Treehouse Rentals</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Mountain Chalet Rentals</a></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+        <div class="section_heading"><a href=""> Airbnb > </a><a href=""> Europe > </a><a href=""> France > </a><a href=""> Bordeaux</a></div>
+      </section>
+      <hr />
+      <section class="Upper_footer">
+        <div class="Support">
+          <table class="footer-table">
+            <tr>
+              <td><h4>Support</h4></td>
+            </tr>
+            <tr>
+              <td><a href="">Help Center</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Safety information</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Cancellation options</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Our COVID-19 Response</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Supporting people with disabilities</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Report a neighborhood concern</a></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="Community">
+          <table class="footer-table">
+            <tr>
+              <td><h4>Community</h4></td>
+            </tr>
+            <tr>
+              <td><a href="">Airbnb.org: disaster relief housing</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Support: Afghan refugees</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Celebrating diversity & belonging</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Combating discriminatino</a></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="Hosting">
+          <table class="footer-table">
+            <tr>
+              <td><h4>Hosting</h4></td>
+            </tr>
+            <tr>
+              <td><a href="">Try hosting</a></td>
+            </tr>
+            <tr>
+              <td><a href="">AirCover: protection for Hosts</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Explore hosting resources</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Visit our community forum</a></td>
+            </tr>
+            <tr>
+              <td><a href="">How to host responsibly</a></td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="About">
+          <table class="footer-table">
+            <tr>
+              <td><h4>About</h4></td>
+            </tr>
+            <tr>
+              <td><a href="">Newsroom</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Learn about new features</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Letter from our founders</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Careers</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Investors</a></td>
+            </tr>
+            <tr>
+              <td><a href="">Airbnb Luxe</a></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <hr />
+      <div class="Lower-footer">
+        <div>
+          <i class="fa-regular fa-copyright" style="color: #9a9b9e"></i>
+          2022 Airbnb, inc.
+          <a href="">Privacy</a>
+          <a href="">Term</a>
+          <a href="">Sitemap</a>
+        </div>
+        <div style="justify-content: flex-end">
+          <i class="fa-solid fa-globe" style="color: #565658"></i>
+          <a href="">English (US)</a>
+          <i class="fa-solid fa-dollar-sign" style="color: #535455"></i>
+          <a href="">USD</a>
+          <i class="fa-brands fa-facebook" style="color: #565658"></i>
+          <i class="fa-brands fa-twitter" style="color: #4e4f50"></i>
+          <i class="fa-brands fa-instagram" style="color: #565658"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./Script/Listing.js"></script>
   </body>
 </html>

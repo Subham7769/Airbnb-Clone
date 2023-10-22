@@ -154,7 +154,7 @@ main {
   gap: 24px;
   height: 55%;
   width: 70%;
-  background-image: url(./Assets/heroCoverImg.png);
+  background-image: url(../Assets/heroCoverImg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -288,7 +288,7 @@ main {
   width: 90%;
   height: 100vh;
   border-radius: 1rem;
-  background-image: url(./Assets/girl.jpg);
+  background-image: url(../Assets/girl.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -363,6 +363,7 @@ table p {
   line-height: 1rem;
 }
 footer{
+  background-color: #F9FAFB;
   width: 90%;
   height: auto;
   display: flex;
@@ -371,14 +372,16 @@ footer{
   align-items: center;
   padding: 1rem;
   }
-footer>div{
+  /* upperfooter */
+.Upper_footer{
 width: 90%;
 height: auto;
 display: flex;
 justify-content: center;
 height: auto;
+gap: auto;
 }
-footer>div>div{
+.Upper_footer>div{
   flex: 1;
 }
 
@@ -387,18 +390,19 @@ footer>div>div{
   width: 100%;
   text-align: left;
   padding: 0.1rem;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
 }
 .footer-table a{
   text-decoration: none;
   color: grey;
 }
-footer>hr{
+hr{
   background-color: lightgray;
   height: 1px;
   width: 100%;
 }
 .Lower-footer{
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 1rem;

@@ -71,53 +71,76 @@ main {
     display: none;
 }
 .results {
-    display: flex;
-    height: 200px;
-    width: 90%;
-    gap: 1rem;
+  display: flex;
+  width: 90%;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
+
 .result-img {
-    flex: 0.35;
-    overflow: hidden;
+  flex: 0.3; /* Set the flex value to 0.3 to control the width */
+  max-height: 100%; /* Ensure the max height is not exceeded */
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.result-img img{
-    border-radius: 1rem;
-    max-width: 100%; /* Maximum image width is 100% of the container width */
-    max-height: 100%; /* Maximum image height is 100% of the container height */
-    height: auto;
+
+.result-img img {
+  max-width: 100%; /* Maximum image width is 100% of the container width */
+  max-height: 100%; /* Maximum image height is 100% of the container height */
+  width: 100%; /* Set the image width to 100% to fit within the container */
+  height: auto;
+  object-fit: cover;
 }
+
 .result-details {
-    flex: 0.65;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  flex: 0.7; /* Adjust the flex value for .result-details accordingly */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 100%; /* Ensure the details height is no more than the container height */
 }
-.name_favorite{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+
+.name_favorite {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.favorite{
-    margin: 0.8rem;
+
+.favorite {
+  margin: 0 0.8rem 0 0;
 }
-.result-details p{
-    margin: 0;
- font-size: 0.9rem;
- color: rgb(105, 105, 105);
+
+.result-details p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgb(105, 105, 105);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
 .result-name {
-    margin: 0.3rem 0;
+  margin: 0.3rem 0;
 }
+
 .rating_price {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.price>span{
-    font-size: 1rem;
-    color: black;
-    font-weight: 600;
+
+.price > span {
+  font-size: 1rem;
+  color: black;
+  font-weight: 600;
 }
+
+
+
+
 .search_results_map {
     /* border: 1px solid black; */
     flex: 0.4;
