@@ -81,8 +81,6 @@ const dataLoader = async () => {
   /******************************************************************************************************************************** */
 
   /***********Accessing Element Of Search.HTML page**********/
-
-  //   All Filters
   let sortByLocation = document.getElementById("sortByLocation").value;
   let sortByDate = document.getElementById("sortByDate").value;
   let sortByGuest = document.getElementById("sortByGuest").value;
@@ -91,10 +89,9 @@ const dataLoader = async () => {
   let SearchButton = document.getElementById("SearchButton");
   let totalAvailable = document.getElementById("totalAvailable");
   let results_list = document.getElementById("results_list");
-  const filterButton = document.getElementsByClassName("filterButton");
+  const filterButton = document.getElementsByClassName("filterButtonUser");
 
   /*********Initialize the rendering**************/
-  //  initializing All Data of site
   AssignTypesFilter();
   InitialResultList();
 
@@ -120,10 +117,12 @@ const dataLoader = async () => {
 
   //   Rendering Search result function
   function createResults(ArrObj) {
-    let total = 0;
     results_list.innerHTML = ``;
+    if(ArrObj.length==0){
+      totalAvailable.innerHTML = `${ArrObj.length}+ stays in Area`;
+    }
     for (var i = 0; i < ArrObj.length; i++) {
-      totalAvailable.innerHTML = `${++total}+ stays in Area`;
+      totalAvailable.innerHTML = `${ArrObj.length}+ stays in Area`;
       let results = document.createElement(`div`);
       results.className = `results`;
       results.id = `${ArrObj[i].id}`;
@@ -164,30 +163,29 @@ const dataLoader = async () => {
   }
 
   // searching the result(incomplete)
-  function SearchedResult(Element, Loc, Date, GuestCount) {
-    Loc = Loc.toLowerCase();
-    Date = Date.toLowerCase();
-    GuestCount = Number(GuestCount);
-    let ElementCity = Element.city.toLowerCase();
-
-    Element.persons >= Number(sortByGuest);
-  }
+  // function SearchedResult(Element, Loc, Date, GuestCount) {
+  //   Loc = Loc.toLowerCase();
+  //   Date = Date.toLowerCase();
+  //   GuestCount = Number(GuestCount);
+  //   let ElementCity = Element.city.toLowerCase();
+  //   Element.persons >= Number(sortByGuest);
+  // }
 
   /**All events Handlers for search & sorting(incomplete)*/
-  SearchButton.addEventListener("click", () => {
-    console.log("Search Button clicked");
-    if (sortByLocation == null && sortByDate == null && sortByGuest == null) {
-      alert("Please enter a location, Duration of stay & Guest Counts");
-    } else {
-      SortedArrObj = SiteData.filter((Element) => {
-        return SearchedResult(Element, sortByLocation, sortByDate, sortByGuest);
-      });
-      console.log(SortedArrObj);
-      createResults(SortedArrObj);
-    }
-  });
+  // SearchButton.addEventListener("click", () => {
+  //   console.log("Search Button clicked");
+  //   if (sortByLocation == null && sortByDate == null && sortByGuest == null) {
+  //     alert("Please enter a location, Duration of stay & Guest Counts");
+  //   } else {
+  //     SortedArrObj = SiteData.filter((Element) => {
+  //       return SearchedResult(Element, sortByLocation, sortByDate, sortByGuest);
+  //     });
+  //     console.log(SortedArrObj);
+  //     createResults(SortedArrObj);
+  //   }
+  // });
 
- // Event handler for filter buttons
+ // Event handler for Amenities filter buttons
 for (let i = 0; i < filterButton.length; i++) {
   filterButton[i].addEventListener("click", (e) => {
     let id = Number(e.target.id);
@@ -307,11 +305,10 @@ sortByPrice.addEventListener("change", () => {
   else if(selectedPriceRange != "Price" || noPriceRanges.length != 0 ){
       for (const range in priceRanges) {
         if(selectedPriceRange == range){
-          console.log(typeof selectedPriceRange + " is " + typeof range);
-          SortedArrObj = SortedArrObj.filter((a) => a.price.rate >= priceRanges[range].min && a.price.rate <= priceRanges[range].max);
+          SortedArrObj = SiteData.filter((a) => a.price.rate >= priceRanges[range].min && a.price.rate <= priceRanges[range].max);
         }
         else{
-          noPriceRanges = SortedArrObj.filter((a) => a.price.rate <= priceRanges[range].min || a.price.rate >= priceRanges[range].max);
+          noPriceRanges = SiteData.filter((a) => a.price.rate <= priceRanges[range].min || a.price.rate >= priceRanges[range].max);
         }
       }
   }
@@ -337,7 +334,4 @@ sortByPrice.addEventListener("change", () => {
     createResults(SortedArrObj);
   });
   
-
-
-
 })();
