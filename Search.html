@@ -28,24 +28,23 @@
           <a href="#"><img src="./Assets/logo_red.png" alt="" class="" /></a>
         </div>
         <div class="nav-center">
-            <div class="search-container">
+            <form class="search-container" method="get">
                 <div>
-                  <input type="text" placeholder="Bordeaux" id="sortByLocation">
+                  <input type="text" placeholder="Bordeaux" id="sortByLocation" required>
                 </div>
                 <div>
-                  <input type="text" placeholder="Feb 19-26" id="sortByDate">
+                  <input type="text" placeholder="Feb 19-26" id="sortByDate" required>
                 </div>
                 <div>
-                  <input type="text" placeholder="2 guests" id="sortByGuest">
+                  <input type="text" placeholder="2 guests" id="sortByGuest" required>
                 </div>
-                <a id="SearchButton">
+                <button id="SearchButton" type="submit" class="SearchButton">
                 <img
                   src="./Assets/searchbutton.svg"
-                  alt="search-button"
-                  id="search-button"
-                  class="searchButton"
-                /></a>
-              </div>
+                  alt="search-button-img"
+                  class="searchButtonImg"
+                /></button>
+              </form>
         </div>
         <div class="nav-right">
           <div><p>Become a Host</p></div>
@@ -63,20 +62,31 @@
       <div class="Sort_filters">
         <select class="filterButton" id="sortByPrice">
           <option value="Price" selected>Price</option>
+          <option value="$30-50">$ 30-50</option>
+          <option value="$50-70">$ 50-70</option>
+          <option value="$70-90">$ 70-90</option>
+          <option value="$90-110">$ 90-110</option>
+          <option value="$110-130">$ 110-130</option>
+          <option value="$130-150">$ 130-150</option>
+          <option value="$150-170">$ 150-170</option>
+          <option value="$170-190">$ 170-190</option>
+          <option value="$190-210">$ 190-210</option>
+          <option value="$210-230">$ 210-230</option>
         </select>
         <select class="filterButton" id="sortByPlaceType">
-          <option value="Type of place" selected>Type of place</option>
+          <option value="null" selected>Type of place</option>
         </select>
-        <button class="filterButton" id="sortByFreeCancellation">Free Cancellation</button>
-        <button class="filterButton" id="sortByWifi">Wifi</button>
-        <button class="filterButton" id="sortByKitchen">Kitchen</button>
-        <button class="filterButton" id="sortByAC">Air conditioning</button>
-        <button class="filterButton" id="sortByWasher">Washer</button>
-        <button class="filterButton" id="sortByIron">Iron</button>
-        <button class="filterButton" id="sortByWorkspace">Dedicated workspace</button>
-        <button class="filterButton" id="sortByParking">Free parking</button>
-        <button class="filterButton" id="sortByDryer">Dryer</button>
-        <button class="filterButton" id="filterButton"><i class="fa-solid fa-sliders" style="color: #050505;"></i> Filters</button>
+        <button class="filterButton" id="1">Free Cancellation</button>
+        <button class="filterButton" id="2">Wifi</button>
+        <button class="filterButton" id="3">Kitchen</button>
+        <button class="filterButton" id="4">Air conditioning</button>
+        <button class="filterButton" id="5">Washer</button>
+        <button class="filterButton" id="6">Iron</button>
+        <button class="filterButton" id="7">Dedicated workspace</button>
+        <button class="filterButton" id="8">Free parking</button>
+        <button class="filterButton" id="9">Dryer</button>
+        <button class="filterButton" id="12"><i class="fa-solid fa-sliders" style="color: #050505;"></i> Filters</button>
+       
     </div>
     </header>
     <main>

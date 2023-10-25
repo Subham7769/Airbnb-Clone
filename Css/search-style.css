@@ -25,7 +25,13 @@ nav > div {
   margin-left: 0.5rem;
   flex: 1;
 }
-.searchButton {
+
+.SearchButton{
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.searchButtonImg {
   width: 40px;
 }
 .Sort_filters {
@@ -150,4 +156,9 @@ main {
 .result_location{
 width: 100%;
 height: 100%;
+}
+
+
+.Active{
+  background-color: rgb(170, 170, 170);
 }
