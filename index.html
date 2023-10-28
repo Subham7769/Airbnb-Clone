@@ -60,23 +60,27 @@
           </div>
           <div>
             <h4>Check in</h4>
-            <input type="text" id="check-in-date" placeholder="Add dates" />
+            <input type="date" id="check-in-date" placeholder="Add dates" />
           </div>
           <div>
             <h4>Check out</h4>
-            <input type="text" id="Check-out-date" placeholder="Add dates" />
+            <input type="date" id="Check-out-date" placeholder="Add dates" />
           </div>
-          <div>
-            <h4>Location</h4>
-            <input type="text" id="Added-guest" placeholder="Add guest" />
-          </div>
-          <!-- <div> -->
+          <div class="GuestsDiv">
+            <h4>Guests</h4>
+            <i id="GuestsContainer">Guests...</i>
+            <div id="Guests" class="hide">
+              <input type="text" id="adult" size="5" placeholder="Adult..." />
+              <input type="text" id="child" size="5" placeholder="Child..." />
+              <input type="text" id="infant" size="5" placeholder="Infant..." />
+              <input type="text" id="pets" size="5" placeholder="Pets..." />
+            </div>
+          </div>    
           <img
             src="./Assets/searchbutton.svg"
             alt="search-button"
             id="search-button"
           />
-          <!-- </div> -->
         </div>
         <div class="hero"></div>
       </section>
@@ -339,6 +343,6 @@
         </div>
       </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./Script/script.js"></script>
   </body>
 </html>

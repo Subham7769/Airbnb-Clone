@@ -34,6 +34,7 @@ header {
 }
 
 nav {
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -112,11 +113,11 @@ main {
   gap: 1rem;
   padding: 1rem;
   box-sizing: border-box;
-  /* display: none; */
 }
 
 .search-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: 60%;
@@ -139,8 +140,24 @@ main {
 .search-container > div > h4 {
   margin: 0;
 }
+#Guests {
+  padding: 0.5rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  gap: 0.5rem;
+  display: none;
 
-.search-container > div > input[type="text"] {
+}
+#Guests input [type="text"]{
+  width: fit-content;
+  box-shadow: 0 0px 30px white;
+}
+.search-container > div.GuestsDiv{
+  position: relative;
+}
+
+.search-container > div > input[type="text"],input[type="date"] {
   border: none;
   outline: none;
 }
@@ -177,6 +194,7 @@ main {
 }
 .next-trip-card-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
@@ -417,4 +435,297 @@ hr{
   text-decoration: none;
   color: grey;
 }
-/* border: 1px solid red; */
+
+
+@media (max-width: 768px) {
+  
+  header {
+    gap: 0px;
+    padding: 0.4rem 0.5rem;
+  }
+  
+  .nav-left {
+    justify-content: flex-start;
+    flex: 0.2;
+  }
+  .nav-left >a>img{
+    width: 60px;
+  }
+  
+  .nav-center {
+    display: none;
+  }
+  
+  .nav-right {
+    font-size: 0.6rem;
+    flex: 0.8;
+  }
+  
+  .profile-menu {
+    gap: 0.5rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.6rem;
+  }
+  
+  .hero-section {
+    gap: 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    height: 60vh;
+  }
+  
+  .search-container {
+    align-items: center;
+    justify-content: center;
+    width: 99%;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+  }
+  .search-container>img{
+    width: 30px;
+  }
+  .search-container div {
+    margin: 0;
+    margin-left: 0.2rem;
+    flex-direction: column;
+    width: 45%;
+  }
+  
+  .search-container > div > h4 {
+    width: fit-content;
+    margin: 0;
+  }
+  
+  #Guests {
+    left: 30px;
+    display: none;
+  }
+  #Guests input [type="text"]{
+    width: 15px;
+    box-shadow: 0 0px 30px white;
+  }
+  .search-container > div.GuestsDiv{
+    position: relative;
+  }
+  
+  .search-container > div > input[type="text"],input[type="date"] {
+    border: none;
+    outline: none;
+  }
+  
+  .hero {
+    padding: 0rem;
+    gap: 0px;
+    height: 100%;
+    width: 100%;
+    background-image: url(../Assets/heroCoverImg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .Trip-section {
+    width: 99vw;
+    gap: 0.2rem;
+  }
+  .Trip-section > h2 {
+    align-self: flex-start;
+    font-size: 1rem;
+    margin: 0;
+  }
+  .next-trip-card-container {
+    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  
+  .next-trip-card-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 100%;
+    height: 50vh;
+    gap: 0 rem;
+  }
+  .card-img-top{
+    height: 70%;
+  }
+  .card-img-top>img{
+    width: 100%;
+    height: 100%;
+  }
+  .card-body {
+    height: 30%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  .card-body h2{
+    margin: 0;
+  }
+  
+  .Experience-section {
+    border: 1px solid red;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    width: 90%;
+    height: 70vh;
+    flex-direction: column;
+  }
+  .Experience-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .Experience-card {
+    overflow: hidden;
+    border-radius: 1rem;
+    width: 50%;
+    height: 100%;
+    position: relative;
+  }
+  .Experience-card > img {
+    width: 100%;
+    height: 100%;
+  }
+  .Experience-card-text {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    width: 40%;
+    position: absolute;
+    top: 3rem;
+    left: 5rem;
+    color: var(--white);
+  }
+  .Experience-button,
+  .gift-button,
+  .hosting-button {
+    margin: 0px;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+  }
+  
+  .Gift-section {
+    padding: 0rem;
+    width: 100%;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+  .gift-text {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .gift-button {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  .gift-img {
+    padding: 0rem;
+    flex: 1;
+  }
+  .gift-img > img {
+    height: 100%;
+    width: 100%;
+  }
+  .Hosting-section {
+    margin-top: 1rem;
+    padding: 0rem;
+    width: 100vw;
+    height: 30vh;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+  }
+  .hosting-text {
+    justify-content: center;
+    width: 45%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+  .hosting-text> button{
+    font-size: 0.7rem;
+    padding: 0.3rem;
+    width: 70%;
+  }
+  .hosting-text > p {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  
+  .future-gateway-section {
+    width: 99vw;
+    height: 70vh;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    font-size: 0.5rem;
+  }
+  .future-gateway-menu > ul{
+    margin: 0;
+    padding: 0;
+  }
+  .future-gateway-menu > ul > li {
+    display: inline-block;
+    align-items: center;
+    margin-right: 0.5rem;
+  }
+  
+  .future-gateway-menu > ul > li > a {
+    text-decoration: none;
+    color: var(--black);
+  }
+  .active {
+    text-decoration: underline;
+  }
+  .slider-menu {
+    width: 100%;
+    height: auto;
+    overflow-x: scroll;
+  }
+  .my-list > .card {
+  height: auto;
+
+    width: 100%;
+    flex: 0 0 auto;
+    margin-right: 1rem;
+  }
+  table {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    padding: 0.4rem;
+  }
+  table p {
+    margin: 0px;
+    line-height: 1rem;
+  }
+  footer{
+    width: 100%;
+    padding: 0.1rem;
+    }
+    
+  .Upper_footer{
+  width: 100%;
+  flex-direction: column;
+  }
+
+  .footer-table tr td{
+    text-align: center;
+  }
+  .Lower-footer{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .Lower-footer>div{
+    gap: 0.5rem;
+  }
+}

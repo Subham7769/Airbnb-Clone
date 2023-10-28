@@ -26,7 +26,7 @@ nav > div {
   flex: 1;
 }
 
-.SearchButton{
+.SearchButton {
   background-color: transparent;
   border: none;
   outline: none;
@@ -36,7 +36,6 @@ nav > div {
 }
 .Sort_filters {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.5rem;
 }
 .filterButton {
@@ -54,7 +53,6 @@ main {
   height: 80vh;
 }
 .search_results {
-  /* border: 1px solid red; */
   flex: 0.6;
   height: 100%;
   padding: 1rem;
@@ -65,27 +63,28 @@ main {
   height: 1px;
   background-color: lightgrey;
 }
-.results_list{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 85%;
-    overflow-y: scroll;
-    gap:1rem;
+.results_list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 65vh;
+  overflow-y: scroll;
+  gap: 1rem;
 }
-.results_list::-webkit-scrollbar{
-    display: none;
+.results_list::-webkit-scrollbar {
+  display: none;
 }
 .results {
   display: flex;
   width: 90%;
   gap: 1rem;
   flex-wrap: wrap;
+  height: auto;
 }
 
 .result-img {
   flex: 0.3; /* Set the flex value to 0.3 to control the width */
-  max-height: 100%; /* Ensure the max height is not exceeded */
+  max-height: 80%; /* Ensure the max height is not exceeded */
   border-radius: 1rem;
   overflow: hidden;
   display: flex;
@@ -144,21 +143,126 @@ main {
   font-weight: 600;
 }
 
-
-
-
 .search_results_map {
-    /* border: 1px solid black; */
-    flex: 0.4;
+  /* border: 1px solid black; */
+  flex: 0.4;
   height: 100%;
   box-sizing: border-box;
 }
-.result_location{
-width: 100%;
-height: 100%;
+.result_location {
+  width: 100%;
+  height: 100%;
+}
+.modal{
+  display: block;
+  width: 400px;
+  height: auto;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  gap: 1rem;
+  text-align: center;
+}
+.booking_rate_review p {
+  display: flex;
+  justify-content: space-between;
+}
+.booking_table {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.booking_table td {
+  text-align: left;
+  padding: 0;
+  padding-top: 1rem;
+}
+.booking_table td:nth-child(even) {
+  text-align: right;
+}
+.booking_table tr:last-child td {
+  padding-bottom: 1rem;
+}
+.booking_table tfoot {
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-top: 1px solid gray;
+}
+.Active {
+  background-color: rgb(170, 170, 170);
 }
 
+@media (max-width: 768px) {
+  .Sort_filters {
+    width: 100vw;
+    overflow-x: scroll;
+    gap: 0.2rem;
+  }
+  .filterButton {
+    font-size: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+  main {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    width: 100vw;
+    height: 100vh;
+  }
+  .search_results {
+    width: 100%;
+    padding: 1rem;
+    flex: 0.5;
+  }
 
-.Active{
-  background-color: rgb(170, 170, 170);
+  .search_results_map {
+    width: 100%;
+    flex: 0.6;
+  }
+  
+  .results_list {
+    border: 1px solid red;
+    width: 100%;
+    height: 40vh;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .results {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .result-img {
+    width: 100%;
+  }
+  
+  .result-img img {
+    max-width: 100%; /* Maximum image width is 100% of the container width */
+    object-fit: cover;
+  }
+  
+  .result-details {
+    width: 100%;
+    gap: 0rem;
+  }
+  
+  .result-details p {
+    font-size: 0.7rem;
+  }
+  
+  .result-name {
+    font-size: 0.8rem;
+  }
+
+  .rating_price {
+    justify-content: space-between;
+  }
+
 }

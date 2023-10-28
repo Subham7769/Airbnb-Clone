@@ -1,0 +1,47 @@
+<div class="GuestsDiv">
+            <h4>Guests</h4>
+            <p id="GuestsContainer">Guests</p>
+            <div id="Guests">
+              <input type="text" id="adult" placeholder="Adult..." />
+              <input type="text" id="child" placeholder="Child..." />
+              <input type="text" id="infant" placeholder="Infant..." />
+              <input type="text" id="pets" placeholder="Pets..." />
+            </div>
+          </div>    
+
+
+
+
+          .search-container div {
+            margin: 0;
+            margin-left: 0.5rem;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            flex-direction: column;
+            flex: 1;
+          }
+          
+          .search-container > div > h4 {
+            margin: 0;
+          }
+          #Guests {
+            padding: 0.5rem;
+            background-color: white;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            gap: 0.5rem;
+            display: none;
+          }
+          #Guests input [type="text"]{
+            width: fit-content;
+          }
+          .search-container > div.GuestsDiv{
+            position: relative;
+          }
+          
+          .search-container > div > input[type="text"],input[type="date"] {
+            border: none;
+            outline: none;
+          }
