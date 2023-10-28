@@ -28,56 +28,56 @@ let priceRanges = {
 };
 
 /*********************************************Accessing Data from local JSON*********************************************************** */
-// const url = "../Json/data.json";
-// const dataLoader = async () => {
-//   try {
-//     const response = await fetch(url);
-//     const result = await response.json();
-//     const dataArray = result; // Assuming "results" is an array of objects
-//     return dataArray;
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
+const url = "../Json/data.json";
+const dataLoader = async () => {
+  try {
+    const response = await fetch(url);
+    const result = await response.json();
+    const dataArray = result; // Assuming "results" is an array of objects
+    return dataArray;
+  } catch (error) {
+    console.error(error);
+  }
+};
 
-// (async () => {
-//   SiteData = await dataLoader();
-//   console.log(SiteData); // Now SiteData contains the array of objects
+(async () => {
+  SiteData = await dataLoader();
+  console.log(SiteData); // Now SiteData contains the array of objects
 
-//   // You can perform further processing or actions with SiteData here.
-//   SortedArrObj = SiteData;
+  // You can perform further processing or actions with SiteData here.
+  SortedArrObj = SiteData;
   /******************************************************************************************************************************* */
 
   /**********************************************Accessing Data from API*********************************************************** */
 
-  const url = `https://airbnb13.p.rapidapi.com/search-location?location=${localStorageData.locationTobeSearched}&checkin=${localStorageData.checkIn}&checkout=${localStorageData.checkOut}&adults=${localStorageData.adult}&children=${localStorageData.child}&infants=${localStorageData.infant}&pets=${localStorageData.pets}&page=1&currency=USD`;
+  // const url = `https://airbnb13.p.rapidapi.com/search-location?location=${localStorageData.locationTobeSearched}&checkin=${localStorageData.checkIn}&checkout=${localStorageData.checkOut}&adults=${localStorageData.adult}&children=${localStorageData.child}&infants=${localStorageData.infant}&pets=${localStorageData.pets}&page=1&currency=USD`;
 
-  const options = {
-  	method: 'GET',
-  	headers: {
-  		'X-RapidAPI-Key': '4f025f3c90mshcd7cc3f6e18df3cp1342dejsn4acacb873d5a',
-  		'X-RapidAPI-Host': 'airbnb13.p.rapidapi.com'
-  	}
-  };
+  // const options = {
+  // 	method: 'GET',
+  // 	headers: {
+  // 		'X-RapidAPI-Key': '4f025f3c90mshcd7cc3f6e18df3cp1342dejsn4acacb873d5a',
+  // 		'X-RapidAPI-Host': 'airbnb13.p.rapidapi.com'
+  // 	}
+  // };
 
-  const dataLoader = async () => {
-    try {
-      const response = await fetch(url, options);
-      const result = await response.json();
-      const dataArray = result.results; // Assuming "results" is an array of objects
-      // console.log(dataArray);
-      return dataArray;
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const dataLoader = async () => {
+  //   try {
+  //     const response = await fetch(url, options);
+  //     const result = await response.json();
+  //     const dataArray = result.results; // Assuming "results" is an array of objects
+  //     // console.log(dataArray);
+  //     return dataArray;
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
-  (async () => {
-    SiteData = await dataLoader(); // Wait for dataLoader to complete and assign the result to SiteData
-    console.log(SiteData); // Now SiteData contains the array of objects
+  // (async () => {
+  //   SiteData = await dataLoader(); // Wait for dataLoader to complete and assign the result to SiteData
+  //   console.log(SiteData); // Now SiteData contains the array of objects
 
-  // You can perform further processing or actions with SiteData here.
-  SortedArrObj=SiteData;
+  // // You can perform further processing or actions with SiteData here.
+  // SortedArrObj=SiteData;
 
   /******************************************************************************************************************************** */
 
@@ -349,7 +349,7 @@ let priceRanges = {
         } <i class="fa-solid fa-star" style="color: #ffd43b;"></i> (${
         ArrObj[i].reviewsCount
       } reviews)</p>
-        <p class="price"><span>$${ArrObj[i].price.rate}</span> / night</p>
+        <p class="price" title="Show Price Breakdown"><span>$${ArrObj[i].price.rate}</span> / night</p>
       </div>
     </div>`;
 
@@ -394,8 +394,8 @@ let priceRanges = {
 
     // Add booking cost breakdown to the modal
     modal.innerHTML = `
-        <h2>Booking Cost Breakdown</h2>
-        <div class="booking_box">
+    <img src="./Assets/logo_red.png" alt="">
+    <div class="booking_box">
         <div class="booking_rate_review">
           <p>
             <span><b>$${rate}</b> / night</span>
@@ -437,6 +437,7 @@ let priceRanges = {
     // Add a close button to the modal
     const closeButton = document.createElement("button");
     closeButton.innerText = "Close";
+    closeButton.className = "CloseBtn";
     closeButton.addEventListener("click", () => modal.style.display = "none");
     modal.appendChild(closeButton);
 
@@ -460,7 +461,7 @@ function waitForGoogleMaps(ArrObj) {
 function initMap(ArrObj) {
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: ArrObj.lat, lng: ArrObj.lng }, // Centered at some default location
-        zoom: 12
+        zoom: 10
     });
 }
 
