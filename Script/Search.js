@@ -28,56 +28,56 @@ let priceRanges = {
 };
 
 /*********************************************Accessing Data from local JSON*********************************************************** */
-const url = "../Json/data.json";
-const dataLoader = async () => {
-  try {
-    const response = await fetch(url);
-    const result = await response.json();
-    const dataArray = result; // Assuming "results" is an array of objects
-    return dataArray;
-  } catch (error) {
-    console.error(error);
-  }
-};
+// const url = "../Json/data.json";
+// const dataLoader = async () => {
+//   try {
+//     const response = await fetch(url);
+//     const result = await response.json();
+//     const dataArray = result; // Assuming "results" is an array of objects
+//     return dataArray;
+//   } catch (error) {
+//     console.error(error);
+//   }
+// };
 
-(async () => {
-  SiteData = await dataLoader();
-  console.log(SiteData); // Now SiteData contains the array of objects
+// (async () => {
+//   SiteData = await dataLoader();
+//   console.log(SiteData); // Now SiteData contains the array of objects
 
-  // You can perform further processing or actions with SiteData here.
-  SortedArrObj = SiteData;
+//   // You can perform further processing or actions with SiteData here.
+//   SortedArrObj = SiteData;
   /******************************************************************************************************************************* */
 
   /**********************************************Accessing Data from API*********************************************************** */
 
-  // const url = `https://airbnb13.p.rapidapi.com/search-location?location=${localStorageData.locationTobeSearched}&checkin=${localStorageData.checkIn}&checkout=${localStorageData.checkOut}&adults=${localStorageData.adult}&children=${localStorageData.child}&infants=${localStorageData.infant}&pets=${localStorageData.pets}&page=1&currency=USD`;
+  const url = `https://airbnb13.p.rapidapi.com/search-location?location=${localStorageData.locationTobeSearched}&checkin=${localStorageData.checkIn}&checkout=${localStorageData.checkOut}&adults=${localStorageData.adult}&children=${localStorageData.child}&infants=${localStorageData.infant}&pets=${localStorageData.pets}&page=1&currency=USD`;
 
-  // const options = {
-  // 	method: 'GET',
-  // 	headers: {
-  // 		'X-RapidAPI-Key': '4f025f3c90mshcd7cc3f6e18df3cp1342dejsn4acacb873d5a',
-  // 		'X-RapidAPI-Host': 'airbnb13.p.rapidapi.com'
-  // 	}
-  // };
+  const options = {
+  	method: 'GET',
+  	headers: {
+  		'X-RapidAPI-Key': '4f025f3c90mshcd7cc3f6e18df3cp1342dejsn4acacb873d5a',
+  		'X-RapidAPI-Host': 'airbnb13.p.rapidapi.com'
+  	}
+  };
 
-  // const dataLoader = async () => {
-  //   try {
-  //     const response = await fetch(url, options);
-  //     const result = await response.json();
-  //     const dataArray = result.results; // Assuming "results" is an array of objects
-  //     // console.log(dataArray);
-  //     return dataArray;
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
+  const dataLoader = async () => {
+    try {
+      const response = await fetch(url, options);
+      const result = await response.json();
+      const dataArray = result.results; // Assuming "results" is an array of objects
+      // console.log(dataArray);
+      return dataArray;
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-  // (async () => {
-  //   SiteData = await dataLoader(); // Wait for dataLoader to complete and assign the result to SiteData
-  //   console.log(SiteData); // Now SiteData contains the array of objects
+  (async () => {
+    SiteData = await dataLoader(); // Wait for dataLoader to complete and assign the result to SiteData
+    console.log(SiteData); // Now SiteData contains the array of objects
 
-  // // You can perform further processing or actions with SiteData here.
-  // SortedArrObj=SiteData;
+  // You can perform further processing or actions with SiteData here.
+  SortedArrObj=SiteData;
 
   /******************************************************************************************************************************** */
 
