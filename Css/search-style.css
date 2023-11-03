@@ -1,3 +1,19 @@
+.custom-loader {
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  border:8px solid;
+  border-color:#f31111 #0000;
+  animation:s1 1s infinite;
+  display: none;
+}
+@keyframes s1 {to{transform: rotate(.5turn)}}
+
+
 header {
   background-color: white;
   display: flex;
@@ -212,6 +228,8 @@ main {
 .Active {
   background-color: rgb(170, 170, 170);
 }
+
+
 
 @media (max-width: 768px) {
   .Sort_filters {

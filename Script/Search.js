@@ -1,6 +1,6 @@
 /***********Global Variable Declaration**********/
 let localStorageData = JSON.parse(localStorage.getItem("searchData"));
-
+let customLoader = document.getElementById("custom-loader");
 let SiteData;
 let SortedArrObj;
 let NoSpecificType = [];
@@ -31,6 +31,7 @@ let priceRanges = {
 // const url = "../Json/data.json";
 // const dataLoader = async () => {
 //   try {
+//     customLoader.style.display = "block";
 //     const response = await fetch(url);
 //     const result = await response.json();
 //     const dataArray = result; // Assuming "results" is an array of objects
@@ -41,6 +42,7 @@ let priceRanges = {
 // };
 
 // (async () => {
+
 //   SiteData = await dataLoader();
 //   console.log(SiteData); // Now SiteData contains the array of objects
 
@@ -62,6 +64,7 @@ let priceRanges = {
 
   const dataLoader = async () => {
     try {
+    customLoader.style.display = "block";
       const response = await fetch(url, options);
       const result = await response.json();
       const dataArray = result.results; // Assuming "results" is an array of objects
@@ -307,11 +310,11 @@ let priceRanges = {
 
   //   Rendering Search result function
   function createResults(ArrObj) {
-    console.log("first")
+    console.log("checking google Map API results...");
     // Start checking for Google Maps API
     waitForGoogleMaps(ArrObj[0]);
-    console.log("second")
-
+    console.log("result obtained!")
+    customLoader.style.display="none";
     results_list.innerHTML = ``;
     if (ArrObj.length == 0) {
       totalAvailable.innerHTML = `${ArrObj.length}+ stays in ${localStorageData.locationTobeSearched}`;
